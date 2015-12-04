@@ -19,11 +19,10 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, class: 'navbar-brand' do %>
-      <i class="fa fa-users"></i>
-      Dev Match
+        <i class="fa fa-users"></i>
+        Dev Match
       <% end %>
     </div>
-     
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <div class="nav navbar-nav navbar-right">
         <% if current_user %>
@@ -39,14 +38,11 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
-
 <div class="container">
-  <% flash.each do |key,  value| %>
+  <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
-  
-<%= yield %>
+  <%= yield %>
 </div>
-
 </body>
 </html>
